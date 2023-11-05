@@ -1,0 +1,15 @@
+.user-info-container p {
+    font-size: 1.5rem;
+}
+
+#flex {
+    background-color: #ffffff !important;
+    color: #000;
+    flex-direction: column;
+}
+
+#flex > input {
+    border-radius: 5px;
+    height: 25px;
+    margin: 10px 0;
+}

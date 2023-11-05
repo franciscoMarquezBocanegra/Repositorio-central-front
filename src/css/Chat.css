@@ -1,0 +1,224 @@
+html,
+body {
+    margin: 10;
+    padding: 10;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+Columna de chats
+*/
+.flex-container {
+    background-color: #000;
+}
+
+.ce-chat-card {
+    background-color: #091833 !important;
+    color: #0abdc6 !important;
+    border-radius: 15px;
+    width: 96%;
+    margin: 5px;
+}
+
+.ce-chats-container {
+    background-color: black !important;
+    border: #555 solid !important;
+    border-radius: 0px !important;
+}
+
+.ce-chat-list {
+    overflow: auto !important;
+    background-color: black !important;
+}
+
+/*
+Columna del chat
+*/
+
+/*
+Titulo
+*/
+
+.ce-chat-title-container {
+    background-color: #222 !important;
+    color: white !important;
+    filter: alpha(opacity=90);
+}
+
+/*
+Mensajes y su información en general
+*/
+
+.ce-message-bubble {
+    color: #091833 !important;
+    background-color: #0abdc6 !important;
+}
+
+.ce-their-message-bubble {
+    color: #0abdc6 !important;
+    background-color: #091833 !important;
+}
+
+.ce-their-message-sender {
+    color: white !important;
+}
+
+.ce-message-date-text {
+    color: #0abdc6 !important;
+}
+
+.ce-person-text {
+    color: white !important;
+}
+
+#buttons-container div {
+    border-top: none !important;
+}
+
+.ce-person-container > div {
+    display: flex;
+    flex-grow: 1;
+    margin-left: 5rem;
+}
+
+.ce-section-title-container {
+    color: #fff;
+    background: #111 !important;
+    border-radius: 10px;
+    width: 18rem;
+    margin: 5px;
+}
+
+.ce-person-title-container {
+    background: #111 !important;
+}
+
+.ce-chat-feed-container {
+    background-color: black !important;
+}
+
+.ce-send-button-container {
+    background-color: #ea00d9 !important;
+    color: black !important;
+}
+
+.ql-toolbar {
+    background-color: black;
+    border-color: #0abdc6 !important;
+}
+
+.ql-container {
+    background-color: black;
+    opacity: 0.9;
+    color: white;
+    border-color: #0abdc6 !important;
+}
+
+/*
+Columna derecha
+*/
+.ce-settings-column {
+    background-color: #000 !important;
+    border: #555 solid !important;
+    align-content: center !important;
+}
+
+/*
+Botones oscuros, led
+*/
+
+.glow-on-hover {
+    width: 250px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(
+        45deg,
+        #ff0000,
+        #ff7300,
+        #fffb00,
+        #48ff00,
+        #00ffd5,
+        #002bff,
+        #7a00ff,
+        #ff00c8,
+        #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000;
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.ce-chat-list-column,
+.ce-chat-feed-column,
+.ce-settings-column {
+    height: 100vh !important;
+}
+
+@media only screen and (max-width: 800px) {
+    .ce-settings-column {
+        display: none;
+    }
+
+    .ce-person-text {
+        color: #000 !important;
+    }
+}
