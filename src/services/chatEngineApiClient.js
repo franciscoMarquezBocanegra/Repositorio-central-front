@@ -6,12 +6,12 @@ https://axios-http.com/docs/post_example */
 
 export const chatEngineApiClient = (() => {
     const URL = 'https://api.chatengine.io/';
-    const PRIVATE_KEY = '434dfcfb-f05c-47c3-80b9-94ad38bed2f4';
-    const PROJECT_ID = 'f2835e2c-343d-4ab3-9944-7e92dc3c6e98';
+    const PRIVATE_KEY = 'c1dc113d-9f81-450e-9555-244e790cde5d';
+    const PROJECT_ID = '8dc37b6d-a2cf-49fd-804d-64c7365e57f4';
 
     const admin = {
-        username: 'admin@escuelaing.edu.co',
-        contraseña: '827ccb0eea8a706c4c34a16891f84e7b',
+        username: 'francisco',
+        contraseña: 'fran123',
     };
 
     const authHeader = {
@@ -47,10 +47,7 @@ export const chatEngineApiClient = (() => {
                 console.log(JSON.stringify(response.data));
             });
 
-            chatEngineApiClient.addUserToChat(
-                { correo: email },
-                'Bienvenido'
-            );
+            chatEngineApiClient.addUserToChat({ correo: email }, 'Bienvenido');
         },
 
         getUser: async ({ email, password }) => {
@@ -159,7 +156,7 @@ export const chatEngineApiClient = (() => {
         addUserToChat: async (user, siglas) => {
             const map = await chatEngineApiClient.getChatsByUser(null, true);
             if (!(siglas in map)) {
-                alert('Siglas o id de chat no validos.');
+                // alert('Siglas o id de chat no validos.');
                 return;
             }
 

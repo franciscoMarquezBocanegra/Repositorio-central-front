@@ -10,7 +10,7 @@ const Chat = () => {
     return (
         <ChatEngine
             //Chat functionality options
-            projectID="51f9470a-b910-4f84-b3e6-52dfe6030f5f"
+            projectID="8dc37b6d-a2cf-49fd-804d-64c7365e57f4"
             userName={user.correo}
             userSecret={user.contraseña}
             offset={-5}

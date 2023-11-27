@@ -20,7 +20,7 @@ const HomeScreen = () => {
     return (
         <div className="main-container">
             <div className="flex-container">
-                <h1> Bienvenido a RepositorioCentral</h1>
+                <h1> Bienvenido a U-cord</h1>
                 <button
                     type="button"
                     className="glow-on-hover"
